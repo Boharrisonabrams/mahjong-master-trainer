@@ -1,0 +1,222 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: Round 1
+      - generic [ref=e9]: "Tiles left: 83"
+      - generic [ref=e10]: "Honba: 0"
+    - generic [ref=e13]:
+      - generic [ref=e14]: Player 1 (You)
+      - generic [ref=e15]:
+        - button "🀇 1m" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18] [cursor=pointer]: 🀇
+          - generic [ref=e19] [cursor=pointer]: 1m
+        - button "🀈 2m" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22] [cursor=pointer]: 🀈
+          - generic [ref=e23] [cursor=pointer]: 2m
+        - button "🀌 6m" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26] [cursor=pointer]: 🀌
+          - generic [ref=e27] [cursor=pointer]: 6m
+        - button "🀏 9m" [ref=e29] [cursor=pointer]:
+          - generic [ref=e30] [cursor=pointer]: 🀏
+          - generic [ref=e31] [cursor=pointer]: 9m
+        - button "🀚 2p" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34] [cursor=pointer]: 🀚
+          - generic [ref=e35] [cursor=pointer]: 2p
+        - button "🀚 2p" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38] [cursor=pointer]: 🀚
+          - generic [ref=e39] [cursor=pointer]: 2p
+        - button "🀝 5p" [ref=e41] [cursor=pointer]:
+          - generic [ref=e42] [cursor=pointer]: 🀝
+          - generic [ref=e43] [cursor=pointer]: 5p
+        - button "🀐 1s" [ref=e46] [cursor=pointer]:
+          - generic [ref=e47] [cursor=pointer]: 🀐
+          - generic [ref=e48] [cursor=pointer]: 1s
+        - button "🀑 2s" [ref=e50] [cursor=pointer]:
+          - generic [ref=e51] [cursor=pointer]: 🀑
+          - generic [ref=e52] [cursor=pointer]: 2s
+        - button "🀒 3s" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55] [cursor=pointer]: 🀒
+          - generic [ref=e56] [cursor=pointer]: 3s
+        - button "🀔 5s" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59] [cursor=pointer]: 🀔
+          - generic [ref=e60] [cursor=pointer]: 5s
+        - button "🀕 6s" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63] [cursor=pointer]: 🀕
+          - generic [ref=e64] [cursor=pointer]: 6s
+        - button "🀕 6s" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67] [cursor=pointer]: 🀕
+          - generic [ref=e68] [cursor=pointer]: 6s
+        - button "🀄 白" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71] [cursor=pointer]: 🀄
+          - generic [ref=e72] [cursor=pointer]: 白
+    - generic [ref=e78]:
+      - generic [ref=e79]: Player 2
+      - generic [ref=e80]:
+        - generic [ref=e82] [cursor=pointer]:
+          - generic [ref=e83] [cursor=pointer]: 🀀
+          - generic [ref=e84] [cursor=pointer]: 東
+        - generic [ref=e86] [cursor=pointer]:
+          - generic [ref=e87] [cursor=pointer]: 🀀
+          - generic [ref=e88] [cursor=pointer]: 東
+        - generic [ref=e90] [cursor=pointer]:
+          - generic [ref=e91] [cursor=pointer]: 🀀
+          - generic [ref=e92] [cursor=pointer]: 東
+        - generic [ref=e94] [cursor=pointer]:
+          - generic [ref=e95] [cursor=pointer]: 🀀
+          - generic [ref=e96] [cursor=pointer]: 東
+        - generic [ref=e98] [cursor=pointer]:
+          - generic [ref=e99] [cursor=pointer]: 🀀
+          - generic [ref=e100] [cursor=pointer]: 東
+        - generic [ref=e102] [cursor=pointer]:
+          - generic [ref=e103] [cursor=pointer]: 🀀
+          - generic [ref=e104] [cursor=pointer]: 東
+        - generic [ref=e106] [cursor=pointer]:
+          - generic [ref=e107] [cursor=pointer]: 🀀
+          - generic [ref=e108] [cursor=pointer]: 東
+        - generic [ref=e110] [cursor=pointer]:
+          - generic [ref=e111] [cursor=pointer]: 🀀
+          - generic [ref=e112] [cursor=pointer]: 東
+        - generic [ref=e114] [cursor=pointer]:
+          - generic [ref=e115] [cursor=pointer]: 🀀
+          - generic [ref=e116] [cursor=pointer]: 東
+        - generic [ref=e118] [cursor=pointer]:
+          - generic [ref=e119] [cursor=pointer]: 🀀
+          - generic [ref=e120] [cursor=pointer]: 東
+        - generic [ref=e122] [cursor=pointer]:
+          - generic [ref=e123] [cursor=pointer]: 🀀
+          - generic [ref=e124] [cursor=pointer]: 東
+        - generic [ref=e126] [cursor=pointer]:
+          - generic [ref=e127] [cursor=pointer]: 🀀
+          - generic [ref=e128] [cursor=pointer]: 東
+        - generic [ref=e130] [cursor=pointer]:
+          - generic [ref=e131] [cursor=pointer]: 🀀
+          - generic [ref=e132] [cursor=pointer]: 東
+        - generic [ref=e133]: 13 tiles
+    - generic [ref=e136]:
+      - generic [ref=e137]: Player 3
+      - generic [ref=e138]:
+        - generic [ref=e140] [cursor=pointer]:
+          - generic [ref=e141] [cursor=pointer]: 🀀
+          - generic [ref=e142] [cursor=pointer]: 東
+        - generic [ref=e144] [cursor=pointer]:
+          - generic [ref=e145] [cursor=pointer]: 🀀
+          - generic [ref=e146] [cursor=pointer]: 東
+        - generic [ref=e148] [cursor=pointer]:
+          - generic [ref=e149] [cursor=pointer]: 🀀
+          - generic [ref=e150] [cursor=pointer]: 東
+        - generic [ref=e152] [cursor=pointer]:
+          - generic [ref=e153] [cursor=pointer]: 🀀
+          - generic [ref=e154] [cursor=pointer]: 東
+        - generic [ref=e156] [cursor=pointer]:
+          - generic [ref=e157] [cursor=pointer]: 🀀
+          - generic [ref=e158] [cursor=pointer]: 東
+        - generic [ref=e160] [cursor=pointer]:
+          - generic [ref=e161] [cursor=pointer]: 🀀
+          - generic [ref=e162] [cursor=pointer]: 東
+        - generic [ref=e164] [cursor=pointer]:
+          - generic [ref=e165] [cursor=pointer]: 🀀
+          - generic [ref=e166] [cursor=pointer]: 東
+        - generic [ref=e168] [cursor=pointer]:
+          - generic [ref=e169] [cursor=pointer]: 🀀
+          - generic [ref=e170] [cursor=pointer]: 東
+        - generic [ref=e172] [cursor=pointer]:
+          - generic [ref=e173] [cursor=pointer]: 🀀
+          - generic [ref=e174] [cursor=pointer]: 東
+        - generic [ref=e176] [cursor=pointer]:
+          - generic [ref=e177] [cursor=pointer]: 🀀
+          - generic [ref=e178] [cursor=pointer]: 東
+        - generic [ref=e180] [cursor=pointer]:
+          - generic [ref=e181] [cursor=pointer]: 🀀
+          - generic [ref=e182] [cursor=pointer]: 東
+        - generic [ref=e184] [cursor=pointer]:
+          - generic [ref=e185] [cursor=pointer]: 🀀
+          - generic [ref=e186] [cursor=pointer]: 東
+        - generic [ref=e188] [cursor=pointer]:
+          - generic [ref=e189] [cursor=pointer]: 🀀
+          - generic [ref=e190] [cursor=pointer]: 東
+        - generic [ref=e191]: 13 tiles
+    - generic [ref=e194]:
+      - generic [ref=e195]: Player 4
+      - generic [ref=e196]:
+        - generic [ref=e198] [cursor=pointer]:
+          - generic [ref=e199] [cursor=pointer]: 🀀
+          - generic [ref=e200] [cursor=pointer]: 東
+        - generic [ref=e202] [cursor=pointer]:
+          - generic [ref=e203] [cursor=pointer]: 🀀
+          - generic [ref=e204] [cursor=pointer]: 東
+        - generic [ref=e206] [cursor=pointer]:
+          - generic [ref=e207] [cursor=pointer]: 🀀
+          - generic [ref=e208] [cursor=pointer]: 東
+        - generic [ref=e210] [cursor=pointer]:
+          - generic [ref=e211] [cursor=pointer]: 🀀
+          - generic [ref=e212] [cursor=pointer]: 東
+        - generic [ref=e214] [cursor=pointer]:
+          - generic [ref=e215] [cursor=pointer]: 🀀
+          - generic [ref=e216] [cursor=pointer]: 東
+        - generic [ref=e218] [cursor=pointer]:
+          - generic [ref=e219] [cursor=pointer]: 🀀
+          - generic [ref=e220] [cursor=pointer]: 東
+        - generic [ref=e222] [cursor=pointer]:
+          - generic [ref=e223] [cursor=pointer]: 🀀
+          - generic [ref=e224] [cursor=pointer]: 東
+        - generic [ref=e226] [cursor=pointer]:
+          - generic [ref=e227] [cursor=pointer]: 🀀
+          - generic [ref=e228] [cursor=pointer]: 東
+        - generic [ref=e230] [cursor=pointer]:
+          - generic [ref=e231] [cursor=pointer]: 🀀
+          - generic [ref=e232] [cursor=pointer]: 東
+        - generic [ref=e234] [cursor=pointer]:
+          - generic [ref=e235] [cursor=pointer]: 🀀
+          - generic [ref=e236] [cursor=pointer]: 東
+        - generic [ref=e238] [cursor=pointer]:
+          - generic [ref=e239] [cursor=pointer]: 🀀
+          - generic [ref=e240] [cursor=pointer]: 東
+        - generic [ref=e242] [cursor=pointer]:
+          - generic [ref=e243] [cursor=pointer]: 🀀
+          - generic [ref=e244] [cursor=pointer]: 東
+        - generic [ref=e246] [cursor=pointer]:
+          - generic [ref=e247] [cursor=pointer]: 🀀
+          - generic [ref=e248] [cursor=pointer]: 東
+        - generic [ref=e249]: 13 tiles
+    - button "Hide Analysis" [ref=e251]
+    - generic [ref=e252]:
+      - generic [ref=e253]:
+        - img [ref=e254]
+        - heading "Hand Analysis" [level=3] [ref=e262]
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - generic [ref=e265]:
+            - img [ref=e266]
+            - generic [ref=e269]: "Efficiency:"
+          - generic [ref=e270]: 0.0%
+        - generic [ref=e271]:
+          - generic [ref=e272]:
+            - img [ref=e273]
+            - generic [ref=e275]: "Safety:"
+          - generic [ref=e276]: 70.0%
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - img [ref=e279]
+            - generic [ref=e283]: "Win Probability:"
+          - generic [ref=e284]: 0.0%
+      - generic [ref=e285]:
+        - heading "Waiting For:" [level=4] [ref=e286]
+        - generic [ref=e287]: No winning tiles yet - build pairs and sequences
+      - generic [ref=e288]:
+        - heading "Recommendation:" [level=4] [ref=e289]
+        - generic [ref=e290]: Focus on basic pairs
+      - generic [ref=e291]:
+        - generic [ref=e292]: "Tiles in hand: 14"
+        - generic [ref=e293]: "Melds declared: 0"
+        - generic [ref=e294]: "Tiles discarded: 0"
+      - generic [ref=e295]:
+        - heading "💡 Learning Tip:" [level=4] [ref=e296]
+        - generic [ref=e297]: Focus on collecting pairs and building sequences (1-2-3 or identical tiles)
+    - generic [ref=e298]: "Phase: playing"
+  - button "Open Next.js Dev Tools" [ref=e304] [cursor=pointer]:
+    - img [ref=e305] [cursor=pointer]
+  - alert [ref=e308]
+```

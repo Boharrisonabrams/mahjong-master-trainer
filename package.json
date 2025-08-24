@@ -6,22 +6,41 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "playwright test",
+    "test:visual": "playwright test tests/visual/ --reporter=html",
+    "test:game-flow": "playwright test tests/game-flow/ --reporter=html",
+    "test:performance": "playwright test tests/performance/ --reporter=html",
+    "test:cross-browser": "playwright test tests/cross-browser/ --reporter=html",
+    "test:game-states": "playwright test tests/game-states/ --reporter=html",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari --reporter=html",
+    "test:premium": "playwright test --reporter=html",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "playwright:install": "playwright install",
+    "playwright:codegen": "playwright codegen localhost:3000",
+    "test:update-snapshots": "playwright test --update-snapshots"
   },
   "dependencies": {
+    "@types/uuid": "^10.0.0",
+    "lucide-react": "^0.541.0",
+    "next": "15.5.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.0"
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.55.0",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
-    "@eslint/eslintrc": "^3"
+    "playwright": "^1.55.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

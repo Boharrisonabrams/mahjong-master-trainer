@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - heading "Mahjong Master Trainer" [level=1] [ref=e12]
+      - paragraph [ref=e13]: Learn Riichi Mahjong through strategic play against intelligent AI opponents
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "🎯 Strategic Learning" [level=3] [ref=e16]
+        - paragraph [ref=e17]: Real-time analysis shows optimal plays, hand efficiency, and opponent threats
+      - generic [ref=e18]:
+        - heading "🤖 Smart AI Opponents" [level=3] [ref=e19]
+        - paragraph [ref=e20]: Three difficulty levels with realistic decision-making and strategic depth
+      - generic [ref=e21]:
+        - heading "📊 Post-Game Analysis" [level=3] [ref=e22]
+        - paragraph [ref=e23]: Review key decisions and learn from alternative strategies
+      - generic [ref=e24]:
+        - heading "🎓 Progressive Tutorials" [level=3] [ref=e25]
+        - paragraph [ref=e26]: From basic rules to advanced yaku recognition and defensive play
+    - generic [ref=e27]:
+      - button "Start Training Session" [ref=e28]:
+        - img [ref=e29]
+        - generic [ref=e31]: Start Training Session
+      - button "Learn the Basics" [active] [ref=e32]:
+        - img [ref=e33]
+        - generic [ref=e35]: Learn the Basics
+    - generic [ref=e36]:
+      - heading "🎮 How to Play" [level=4] [ref=e37]
+      - list [ref=e38]:
+        - listitem [ref=e39]: • Click tiles in your hand to select and discard them
+        - listitem [ref=e40]: • Watch the analysis panel for strategic insights
+        - listitem [ref=e41]: • Learn from AI decisions and post-game reviews
+        - listitem [ref=e42]: • Progress from beginner to master level play
+  - button "Open Next.js Dev Tools" [ref=e48] [cursor=pointer]:
+    - img [ref=e49] [cursor=pointer]
+  - alert [ref=e52]: Mahjong Master Trainer
+```
