@@ -1,11 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useGame } from '@/hooks/useGame';
 import { GameBoard } from '@/components/GameBoard';
-import { Play, RotateCcw, BookOpen, Trophy } from 'lucide-react';
+import { GlossaryModal } from '@/components/GlossaryModal';
+import { AmericanMahjongCard } from '@/components/AmericanMahjongCard';
+import { Play, RotateCcw, BookOpen, Trophy, HelpCircle, Flag } from 'lucide-react';
 
 export default function Home() {
+  const [showGlossary, setShowGlossary] = useState(false);
+  const [showAmericanCard, setShowAmericanCard] = useState(false);
+  
   const {
     gameState,
     isGameActive,
@@ -77,6 +82,24 @@ export default function Home() {
               <BookOpen className="w-6 h-6" />
               <span>Learn the Basics</span>
             </button>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                onClick={() => setShowGlossary(true)}
+                className="flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
+              >
+                <HelpCircle className="w-5 h-5" />
+                <span>Glossary</span>
+              </button>
+              
+              <button
+                onClick={() => setShowAmericanCard(true)}
+                className="flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
+              >
+                <Flag className="w-5 h-5" />
+                <span>American Mahjong</span>
+              </button>
+            </div>
           </div>
 
           <div className="mt-8 p-4 bg-gray-50 rounded-lg">
@@ -89,6 +112,15 @@ export default function Home() {
             </ul>
           </div>
         </div>
+        
+        {/* Modals */}
+        {showGlossary && (
+          <GlossaryModal onClose={() => setShowGlossary(false)} />
+        )}
+        
+        {showAmericanCard && (
+          <AmericanMahjongCard onClose={() => setShowAmericanCard(false)} />
+        )}
       </div>
     );
   }

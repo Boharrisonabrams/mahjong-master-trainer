@@ -16,36 +16,44 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({ onClose }) => {
 
   const tutorialSteps: TutorialStep[] = [
     {
-      title: "Welcome to Mahjong Trainer!",
-      content: "This interactive trainer will teach you Riichi Mahjong from basics to advanced strategy. You'll play against AI opponents while learning optimal moves and reading opponent hands."
+      title: "Welcome to Mahjong! 🀄",
+      content: "Never played Mahjong before? Don't worry! Think of it like Rummy - you're collecting sets of tiles to win. This tutorial will teach you everything you need to know, starting from absolute basics."
     },
     {
-      title: "The Goal of Mahjong",
-      content: "Form a complete hand of 14 tiles using 4 sets (3-tile groups) plus 1 pair (2 identical tiles). Sets can be sequences (1-2-3) in the same suit or triplets (three identical tiles)."
+      title: "What IS Mahjong? 🤔",
+      content: "Mahjong is like a mix of Rummy and Poker played with beautiful tiles instead of cards. Your goal: Be the first to collect a 'winning hand' - that's 4 groups of 3 tiles + 1 pair (2 matching tiles). It's easier than it sounds!"
     },
     {
-      title: "Tile Types",
-      content: "There are 4 suits: Dots (⚬), Bamboo (🎋), Characters (漢), and Honors (風). Number tiles go 1-9 in each suit. Honors include winds (East/South/West/North) and dragons (Red/Green/White)."
+      title: "Meet Your Tiles 🀙🀐🀇",
+      content: "Imagine poker cards, but with pretty symbols! There are only 3 types to remember: DOTS (circles), BAMBOO (sticks), and CHARACTERS (Chinese numbers). Plus some special 'honor' tiles. Each type has numbers 1-9."
     },
     {
-      title: "Basic Gameplay",
-      content: "Players take turns drawing and discarding tiles. You can claim discarded tiles to form sets (Chi/Pon/Kan). The first player to form a complete hand wins the round."
+      title: "What's a Winning Hand? 🏆",
+      content: "Super simple: Get 4 groups of 3 tiles + 1 pair. Groups can be: (1) Three identical tiles (like 3-3-3), or (2) Three in sequence (like 4-5-6 of same suit). The pair is just two identical tiles. That's it!"
     },
     {
-      title: "Reading the Board",
-      content: "Watch your opponents' discards and declared sets. This tells you what they're collecting and what's safe to discard. The analysis panel will help you understand these patterns."
+      title: "How Do You Play? 🎮",
+      content: "It's like musical chairs with tiles! Players take turns: (1) Draw a tile from the pile, (2) Discard a tile you don't want. Keep doing this until someone gets a winning hand. You can also 'steal' tiles others discard if they help you!"
     },
     {
-      title: "Strategy Basics",
-      content: "Balance speed (completing your hand quickly) with safety (avoiding dangerous discards) and value (collecting yaku for bonus points). The AI will show you optimal plays."
+      title: "Your First Move 👆",
+      content: "When it's your turn: Click any tile in your hand to SELECT it (it'll light up blue), then click it again to DISCARD it. The game will automatically draw new tiles for you. Don't worry about strategy yet - just get comfortable clicking!"
     },
     {
-      title: "Using the Analysis Panel",
-      content: "The analysis panel shows your hand efficiency, safety rating, and winning probability. It highlights which tiles you're waiting for and warns about opponent threats."
+      title: "Understanding the Analysis Panel 📊",
+      content: "See that box on the left? It's your personal coach! 'Efficiency' shows how close you are to winning. 'Safety' warns if your discards might help opponents. 'Waiting For' shows which tiles you need. Ignore the numbers at first - just read the text!"
     },
     {
-      title: "Learning Through Play",
-      content: "Start playing! The AI opponents will make realistic moves and the analysis will explain why certain plays are better. Post-game analysis will review your key decisions."
+      title: "Your Learning Journey 🚀",
+      content: "Ready to try? Don't worry about winning your first game - focus on: (1) Getting comfortable clicking tiles, (2) Reading what the analysis panel says, (3) Watching what the AI players do. You'll improve naturally!"
+    },
+    {
+      title: "Common Beginner Questions 💡",
+      content: "Q: What if I don't know which tile to discard? A: Check the analysis panel - it gives suggestions! Q: How do I know if I'm winning? A: Your efficiency percentage will go up! Q: What if I make mistakes? A: Perfect! That's how you learn. The AI will show you better moves."
+    },
+    {
+      title: "American Mahjong Players Note 🇺🇸",
+      content: "If you know American Mahjong, this is different! No jokers, no 'hands' card, simpler rules. Think of it as the original, elegant version. The basic concept is the same - collect groups - but the details are simpler."
     }
   ];
 
@@ -104,54 +112,135 @@ export const TutorialModal: React.FC<TutorialModalProps> = ({ onClose }) => {
             {step.content}
           </div>
 
-          {/* Visual examples for certain steps */}
-          {currentStep === 1 && (
-            <div className="bg-gray-50 p-4 rounded-lg mb-4">
-              <div className="text-sm font-semibold mb-2">Example Winning Hand:</div>
-              <div className="text-lg font-mono">
-                123m 456p 789s 111z 22z
-              </div>
-              <div className="text-xs text-gray-600 mt-1">
-                (3 sequences + 1 triplet + 1 pair)
+          {/* Visual examples for each step */}
+          {currentStep === 2 && (
+            <div className="bg-green-50 border border-green-200 p-4 rounded-lg mb-4">
+              <div className="text-sm font-semibold mb-2 text-green-800">Think of it like Rummy:</div>
+              <div className="text-sm text-green-700">
+                <strong>Rummy:</strong> Collect 3-of-a-kind or runs (like 4♠-5♠-6♠)<br/>
+                <strong>Mahjong:</strong> Collect 3-of-a-kind or runs (like 4🀙-5🀚-6🀛)
               </div>
             </div>
           )}
 
-          {currentStep === 2 && (
-            <div className="bg-gray-50 p-4 rounded-lg mb-4">
-              <div className="grid grid-cols-4 gap-4 text-center">
-                <div>
-                  <div className="text-2xl mb-1">🀙🀚🀛</div>
-                  <div className="text-xs">Dots (Pin)</div>
+          {currentStep === 3 && (
+            <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="bg-white p-3 rounded">
+                  <div className="text-3xl mb-2">🀙🀚🀛</div>
+                  <div className="text-sm font-semibold text-blue-800">DOTS</div>
+                  <div className="text-xs text-blue-600">(Like ⚫⚫⚫)</div>
                 </div>
-                <div>
-                  <div className="text-2xl mb-1">🀐🀑🀒</div>
-                  <div className="text-xs">Bamboo (Sou)</div>
+                <div className="bg-white p-3 rounded">
+                  <div className="text-3xl mb-2">🀐🀑🀒</div>
+                  <div className="text-sm font-semibold text-green-800">BAMBOO</div>
+                  <div className="text-xs text-green-600">(Like 🎋🎋🎋)</div>
                 </div>
-                <div>
-                  <div className="text-2xl mb-1">🀇🀈🀉</div>
-                  <div className="text-xs">Characters (Man)</div>
+                <div className="bg-white p-3 rounded">
+                  <div className="text-3xl mb-2">🀇🀈🀉</div>
+                  <div className="text-sm font-semibold text-red-800">CHARACTERS</div>
+                  <div className="text-xs text-red-600">(Chinese 1-2-3)</div>
                 </div>
-                <div>
-                  <div className="text-2xl mb-1">🀀🀁🀄</div>
-                  <div className="text-xs">Honors</div>
+              </div>
+              <div className="text-center mt-3 text-sm text-gray-600">
+                Plus some special tiles (winds & dragons) - don't worry about these yet!
+              </div>
+            </div>
+          )}
+
+          {currentStep === 4 && (
+            <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mb-4">
+              <div className="text-sm font-semibold mb-3 text-yellow-800">Winning Hand = 4 Groups + 1 Pair</div>
+              <div className="space-y-2">
+                <div className="bg-white p-2 rounded text-center">
+                  <div className="text-lg">🀇🀇🀇 + 🀙🀚🀛 + 🀐🀑🀒 + 🀆🀆🀆 + 🀄🀄</div>
+                  <div className="text-xs text-gray-600 mt-1">
+                    Group 1 + Group 2 + Group 3 + Group 4 + Pair = WIN!
+                  </div>
                 </div>
+                <div className="text-xs text-yellow-700">
+                  <strong>Groups:</strong> Either 3 identical (🀇🀇🀇) or 3 in sequence (🀙🀚🀛)<br/>
+                  <strong>Pair:</strong> Just 2 identical tiles (🀄🀄)
+                </div>
+              </div>
+            </div>
+          )}
+
+          {currentStep === 5 && (
+            <div className="bg-purple-50 border border-purple-200 p-4 rounded-lg mb-4">
+              <div className="text-sm font-semibold mb-2 text-purple-800">The Turn Cycle:</div>
+              <div className="space-y-2 text-sm text-purple-700">
+                <div className="flex items-center"><span className="text-lg mr-2">1️⃣</span> Draw a tile from the wall</div>
+                <div className="flex items-center"><span className="text-lg mr-2">2️⃣</span> Discard a tile you don't want</div>
+                <div className="flex items-center"><span className="text-lg mr-2">3️⃣</span> Next player's turn</div>
+                <div className="flex items-center"><span className="text-lg mr-2">🔄</span> Repeat until someone wins!</div>
               </div>
             </div>
           )}
 
           {currentStep === 6 && (
             <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
-              <div className="text-sm font-semibold mb-2 text-blue-800">
-                Analysis Panel Features:
+              <div className="text-sm font-semibold mb-2 text-blue-800">Your First Moves:</div>
+              <div className="space-y-3">
+                <div className="bg-white p-3 rounded flex items-center">
+                  <div className="text-2xl mr-3">👆</div>
+                  <div>
+                    <div className="font-semibold text-blue-800">Click once = SELECT</div>
+                    <div className="text-xs text-blue-600">Tile will light up blue</div>
+                  </div>
+                </div>
+                <div className="bg-white p-3 rounded flex items-center">
+                  <div className="text-2xl mr-3">👆👆</div>
+                  <div>
+                    <div className="font-semibold text-blue-800">Click again = DISCARD</div>
+                    <div className="text-xs text-blue-600">Tile goes to discard pile</div>
+                  </div>
+                </div>
               </div>
-              <ul className="text-sm text-blue-700 space-y-1">
-                <li>• <strong>Efficiency:</strong> How close you are to winning</li>
-                <li>• <strong>Safety:</strong> Risk level of your discards</li>
-                <li>• <strong>Waiting Tiles:</strong> Which tiles complete your hand</li>
-                <li>• <strong>Threats:</strong> Opponent danger warnings</li>
-                <li>• <strong>Recommendations:</strong> AI-suggested best plays</li>
-              </ul>
+            </div>
+          )}
+
+          {currentStep === 7 && (
+            <div className="bg-green-50 border border-green-200 p-4 rounded-lg mb-4">
+              <div className="text-sm font-semibold mb-2 text-green-800">Your Analysis Coach:</div>
+              <div className="space-y-2 text-sm text-green-700">
+                <div><strong>📈 Efficiency:</strong> "How close am I to winning?" (Higher = closer!)</div>
+                <div><strong>🛡️ Safety:</strong> "Is my discard dangerous?" (Higher = safer!)</div>
+                <div><strong>🎯 Waiting For:</strong> "Which tiles do I need?" (Your target tiles!)</div>
+                <div><strong>💡 Recommendation:</strong> "What should I do?" (Your best move!)</div>
+              </div>
+            </div>
+          )}
+
+          {currentStep === 8 && (
+            <div className="bg-orange-50 border border-orange-200 p-4 rounded-lg mb-4">
+              <div className="text-sm font-semibold mb-2 text-orange-800">Your Learning Goals:</div>
+              <div className="space-y-2">
+                <div className="flex items-center text-sm text-orange-700">
+                  <span className="mr-2">🎯</span> Get comfortable clicking tiles
+                </div>
+                <div className="flex items-center text-sm text-orange-700">
+                  <span className="mr-2">📖</span> Read the analysis panel suggestions
+                </div>
+                <div className="flex items-center text-sm text-orange-700">
+                  <span className="mr-2">👀</span> Watch what the AI players do
+                </div>
+                <div className="flex items-center text-sm text-orange-700">
+                  <span className="mr-2">🚀</span> Have fun learning!
+                </div>
+              </div>
+            </div>
+          )}
+
+          {currentStep === 9 && (
+            <div className="bg-red-50 border border-red-200 p-4 rounded-lg mb-4">
+              <div className="text-sm font-semibold mb-2 text-red-800">Quick Help:</div>
+              <div className="space-y-2 text-sm text-red-700">
+                <div><strong>❓ Lost?</strong> Read the "Recommendation" in the analysis panel</div>
+                <div><strong>🤔 Confused?</strong> Try discarding your highest single tile first</div>
+                <div><strong>😰 Overwhelmed?</strong> Focus on just collecting pairs and sequences</div>
+                <div><strong>🎉 Having fun?</strong> You're doing it right!</div>
+              </div>
             </div>
           )}
         </div>

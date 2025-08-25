@@ -149,14 +149,48 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = ({
         )}
       </div>
 
-      {/* Learning Tips */}
+      {/* Beginner-Friendly Learning Tips */}
       <div className="mt-4 pt-3 border-t border-gray-200">
-        <h4 className="text-sm font-semibold mb-2 text-gray-700">💡 Learning Tip:</h4>
-        <div className="text-xs text-gray-600 bg-yellow-50 p-2 rounded">
-          {winningTiles.length === 0 && "Focus on collecting pairs and building sequences (1-2-3 or identical tiles)"}
-          {winningTiles.length > 0 && winningTiles.length <= 3 && "Good progress! You're getting close to tenpai (ready hand)"}
-          {winningTiles.length > 3 && winningTiles.length <= 8 && "Excellent! Multiple paths to victory. Consider declaring riichi for bonus points"}
-          {winningTiles.length > 8 && "Outstanding hand efficiency! You have many winning opportunities"}
+        <h4 className="text-sm font-semibold mb-2 text-gray-700">💡 Beginner Guidance:</h4>
+        <div className="space-y-2">
+          {/* Progress indicator */}
+          <div className="text-xs text-gray-600 bg-yellow-50 p-2 rounded">
+            {winningTiles.length === 0 && (
+              <>
+                <strong>🔰 Starting Out:</strong> Look for pairs (two identical tiles) or potential sequences (like 3-4 needing a 2 or 5). Discard single tiles that don't connect to anything.
+              </>
+            )}
+            {winningTiles.length > 0 && winningTiles.length <= 3 && (
+              <>
+                <strong>📈 Making Progress:</strong> Great! You're getting close to a winning hand. Keep collecting the tiles shown in "Waiting For" above.
+              </>
+            )}
+            {winningTiles.length > 3 && winningTiles.length <= 8 && (
+              <>
+                <strong>🎯 Almost There:</strong> Excellent progress! You have multiple ways to win. Focus on the most common tiles (lower numbers are usually safer).
+              </>
+            )}
+            {winningTiles.length > 8 && (
+              <>
+                <strong>🏆 Master Level:</strong> Outstanding! Your hand is very flexible. Consider what opponents might be collecting before discarding.
+              </>
+            )}
+          </div>
+          
+          {/* Next action suggestion */}
+          <div className="text-xs bg-blue-50 p-2 rounded border border-blue-200">
+            <strong>🎮 What to do next:</strong>
+            {analysis.efficiency < 0.3 && " Try discarding your highest single tile (like 9s or honors you don't have pairs of)."}
+            {analysis.efficiency >= 0.3 && analysis.efficiency < 0.6 && " Keep tiles that are close to making sequences or sets. Discard isolated tiles."}
+            {analysis.efficiency >= 0.6 && " You're close! Focus on the specific tiles you need and avoid dangerous discards."}
+          </div>
+          
+          {/* Safety reminder for beginners */}
+          {analysis.safetyRating < 0.5 && (
+            <div className="text-xs bg-red-50 p-2 rounded border border-red-200">
+              <strong>⚠️ Safety Alert:</strong> Be careful! Other players might be close to winning. Consider discarding safer tiles (like those already discarded by others).
+            </div>
+          )}
         </div>
       </div>
     </div>

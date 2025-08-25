@@ -4,6 +4,8 @@ import { Hand } from './Hand';
 import { Tile } from './Tile';
 import { AnalysisPanel } from './AnalysisPanel';
 import { TutorialModal } from './TutorialModal';
+import { GlossaryModal } from './GlossaryModal';
+import { AmericanMahjongCard } from './AmericanMahjongCard';
 
 interface GameBoardProps {
   gameState: GameState;
@@ -20,6 +22,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({
 }) => {
   const [selectedTile, setSelectedTile] = useState<TileType | null>(null);
   const [showAnalysis, setShowAnalysis] = useState(true);
+  const [showInGameGlossary, setShowInGameGlossary] = useState(false);
+  const [showInGameAmericanCard, setShowInGameAmericanCard] = useState(false);
   
   const currentPlayer = gameState.players[gameState.currentPlayer];
   const humanPlayer = gameState.players.find(p => !p.isBot);
@@ -195,14 +199,40 @@ export const GameBoard: React.FC<GameBoardProps> = ({
       )}
 
       {/* Tutorial modal */}
+      {/* Game controls and help */}
+      <div className="absolute top-4 right-4 flex items-center space-x-2">
+        <div className="bg-black bg-opacity-50 text-white px-3 py-2 rounded-lg text-sm">
+          Phase: {gameState.phase}
+        </div>
+        <button
+          onClick={() => setShowInGameGlossary(true)}
+          className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded-lg text-sm transition-colors"
+          title="Open Glossary"
+        >
+          📚 Help
+        </button>
+        <button
+          onClick={() => setShowInGameAmericanCard(true)}
+          className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-sm transition-colors"
+          title="American Mahjong Reference"
+        >
+          🇺🇸 American
+        </button>
+      </div>
+      
+      {/* Tutorial Modal */}
       {showTutorial && onTutorialClose && (
         <TutorialModal onClose={onTutorialClose} />
       )}
       
-      {/* Game phase indicator */}
-      <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg">
-        Phase: {gameState.phase}
-      </div>
+      {/* In-game Help Modals */}
+      {showInGameGlossary && (
+        <GlossaryModal onClose={() => setShowInGameGlossary(false)} />
+      )}
+      
+      {showInGameAmericanCard && (
+        <AmericanMahjongCard onClose={() => setShowInGameAmericanCard(false)} />
+      )}
     </div>
   );
 };
